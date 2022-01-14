@@ -1,0 +1,32 @@
+{% extends 'structure.html' %}
+
+{% block title %} Liste des cours {% endblock %}
+
+{% block content %}
+
+    <p> Nombre de cours : {{ cours.count }}</p>
+    <table class="table">
+    <tr>
+        <th> Code </th>
+        <th> Titre </th>
+        <th> Semestre </th>
+        <th> Responsable </th>
+        <th> Nombre de crédits </th>
+        <th> Mots clés </th>
+
+    </tr>
+    {% for elt in cours %}
+    <tr>
+        <td> {{ elt.code }} </td>
+        <td> {{ elt.titre }} </td>
+        <td> {{ elt.semestre }} </td>
+        <td> {{ elt.responsable }} </td>
+        <td> {{ elt.credit }} </td>
+        <td> {{ elt.mots_cles }} </td>
+    </tr>
+
+    {% endfor %}
+
+    </table>
+
+{% endblock %}

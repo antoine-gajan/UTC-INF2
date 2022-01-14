@@ -1,0 +1,27 @@
+{% extends 'structure.html' %}
+
+{% block title %} Liste des étudiants {% endblock %}
+
+{% block content %}
+
+    <p> Nombre d'étudiants : {{ etudiants.count }}</p>
+    <table class="table">
+    <tr>
+        <th> INE </th>
+        <th> Nom </th>
+        <th> Prenom </th>
+        <th> Niveau </th>
+    </tr>
+    {% for etudiant in etudiants %}
+    <tr>
+        <td> {{ etudiant.INE }} </td>
+        <td> {{ etudiant.nom }} </td>
+        <td> {{ etudiant.prenom }} </td>
+        <td> {{ etudiant.niveau }} </td>
+    </tr>
+
+    {% endfor %}
+
+    </table>
+
+{% endblock %}

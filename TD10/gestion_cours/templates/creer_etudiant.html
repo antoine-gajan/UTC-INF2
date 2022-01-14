@@ -1,0 +1,14 @@
+{% extends 'structure.html' %}
+
+{% block title %} Créer un étudiant {% endblock %}
+
+{% block content %}
+
+<form action="{% url 'creer_etudiant' %}" method="post" id="forms">
+        {% csrf_token %}
+        {{ form.as_p }}
+<input type="submit" value="Créer l'étudiant">
+</form>
+
+
+{% endblock %}
