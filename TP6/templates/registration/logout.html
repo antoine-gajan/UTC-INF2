@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %} Successfully disconnected ! {% endblock %}
+
+{% block content %}
+    {% if disconnect %}
+    <div>
+    <p> You have been successfully disconnected.</p>
+    <br>
+    <p> See you soon !</p>
+    </div>
+
+     <a href="../">Return to home page</a>
+    {% endif %}
+{% endblock %}
