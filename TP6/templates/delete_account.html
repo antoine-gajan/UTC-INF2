@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% block title %}{% endblock %}
+
+<form action="{% url 'delete_account' %}" method="post">
+    <table>
+    {% csrf_token %}
+    <tr> <td colspan="2" class="header">Delete your account</td></tr>
+    {{ form.as_table }}
+    <tr> <td colspan="2" class="submit"><input type="submit" value="Delete your account" />  </td></tr>
+    </table>
+
+</form>
+{% if delete %}Your account has been successfully deleted !
+{% elif envoi and not delete %}Your account has been saved !
+{% endif %}
+{% endblock %}

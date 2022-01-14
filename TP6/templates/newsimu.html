@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<form action="{% url 'newsimu' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+    <tr> <td colspan="2" class="header">New simulation</td></tr>
+     {{ form.as_table }}
+     <tr> <td colspan="2" class="submit"><input type="submit" value="Run simulation" /></td></tr>
+    </table>
+
+</form>
+
+{% if envoi %}Your simulation has been added to the queue !{% endif %}
+{% endblock %}
