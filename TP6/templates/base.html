@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title> Simulation interface </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TP 6 : Django">
+    <meta name="author" content="Antoine GAJAN - Arman SAINT-MARC">
+</head>
+
+<body>
+<nav id="navbar-container">
+    <div id="navbar">
+        <span>INF2 - TP 6 : Django</span>
+        {% block nav %}
+        <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/profile/"{% if "/profile" in request.path %}class="active"{% endif %}>Profile</a></li>
+
+
+       <li><a href="/sim_list/"{% if "/sim_list" in request.path %}class="active"{% endif %}>Simulations</a></li>
+       <li><a href="/newsimu/"{% if "/newsimu" in request.path %}class="active"{% endif %}>New Simulation</a></li>
+        {% if user.is_authenticated %}
+       <li><a href="/update_password/"{% if "/update_password" in request.path %}class="active"{% endif %}>Update Password</a></li>
+        <li><a href="/delete_account/"{% if "/delete_account" in request.path %}class="active"{% endif %}>Delete Account</a></li>
+        {% endif %}
+        {% if not user.is_authenticated %}
+        <li><a href="/signup/"{% if "/signup" in request.path %}class="active"{% endif %}>Sign Up</a></li>
+        {% endif %}
+        {% if user.is_authenticated %}
+       <li><a href="/disconnect/">Disconnect</a></li>
+        {% endif %}
+        </ul>
+        {% endblock %}
+    </div>
+</nav>
+<br>
+<main class="container">
+    <h1>{% block title %}Accueil{% endblock %}</h1>
+
+    {% block content %}
+    <h2>Contexte du TP : </h2>
+    <p>Il s'agit d’améliorer une interface web pour un code de simulation basé sur le modèle FitzHugh Nagumo. <br>
+Pour information, les deux équations suivantes forment le modèle de FitzHugh Nagumo : <br><br>
+        v˙ = v − 1/3 v^3 − w + I <br>
+        w˙=1/τ(v+α−βw) <br> <br>
+Elles simulent la valeur du potentiel électrique d’un neurone (V) en fonction du temps et
+des paramètres : α , δ , ε . w est une variable d’inactivation sans correspondance physique,
+nécessaire au calcul.</p>
+<br> <br>
+    <h2>Objectifs du TP : </h2>
+        <h3>Gestion des utilisateurs</h3>
+        <ul>
+            <li>Mettre en place un formulaire pour la création d'utilisateurs</li>
+            <li>Permettre à l'utilisateur de modifier son mot de passe</li>
+            <li>Permettre à l’utilisateur de supprimer son compte</li>
+        </ul>
+
+        <h3>Gestion des simulations</h3>
+        <ul>
+            <li>Permettre à un utilisateur de partager une simulation avec d'autres utilisateurs</li>
+            <li>Ajouter un système de favoris sur les simulations</li>
+        </ul>
+    {% endblock %}
+</main>
+
+<footer class="footer">
+    <p class="footer">TP 6 réalisé par Antoine GAJAN et Arman SAINT-MARC{% block infos %}
+    <br> {% now "H:i - d/m/Y" %} {% endblock %}</p>
+</footer>
+</body>
+</html>
