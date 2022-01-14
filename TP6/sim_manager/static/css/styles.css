@@ -1,0 +1,149 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+table{
+	margin: auto;
+	border: solid;
+	border-collapse: collapse;
+	border-color: black;
+	background-color: #A8ADAD;
+}
+
+#navbar-container {
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+    line-height: 50px;
+}
+
+#navbar {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+#navbar > span {
+    font-weight: bold;
+    font-size: large;
+}
+
+#navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+}
+
+#navbar ul li a {
+    cursor: pointer;
+    padding: 10px 8px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#navbar ul li a.active {
+    background-color: #4085bf;
+    color: white;
+    border-radius: 5px;
+}
+
+#navbar ul li a:hover {
+    background-color: #2e5e85;
+    color: white;
+    border-radius: 5px;
+}
+
+
+#navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.bg-grey {
+    background: #fafafa;
+}
+
+.errorlist {
+    font-weight: bold;
+    color: darkred;
+}
+
+input[type=submit]{
+	background-color: skyblue;
+	border-color: #044DF9;
+	height: 50px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+input[type=submit]:hover{
+	background-color: #5D73FC;
+	border-color: #5D73FC;
+	color: white;
+	transition: 0.3s;
+}
+
+
+input{
+	width: 100%;
+  padding: 12px 18px;
+  margin: 5px;
+  border: solid 2px;
+  border-radius: 40px;
+  border-color: black;
+  box-sizing: border-box;
+}
+
+input:focus{
+	outline: none;
+	border-color: #07C0CA;
+}
+
+td{
+	padding: 15px;
+}
+
+
+/* Pour le pied de page */
+footer{
+	display: flex;
+	background-color: #454845;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	height: 50px;
+	width: 100%;
+}
+
+p.footer{
+	font-size: 16px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.header{
+    font-size: 40px;
+    text-align: center;
+	font-weight: bold;
+	padding: 10;
+	background-color: #CED4D4;
+}
+
+.submit{
+	background-color: #CED4D4;
+}
