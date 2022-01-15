@@ -1,6 +1,6 @@
 # UTC - INF2
 
-Ce dépôt GitHub contient l'ensemble des TD et TP de l'UV INF2 (Programmation et développements niveau 2) de l'UTC réalisés en A21. 
+Ce dépôt GitHub contient l'ensemble des TD et TP de l'UV INF2 (Programmation et développements niveau 2) de l'UTC réalisée en A21. 
 
 __Notions abordées :__ 
 
