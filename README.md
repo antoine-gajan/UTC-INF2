@@ -1,8 +1,10 @@
 # UTC - INF2
 
+## 💻︎ Contenu du repository :
+
 Ce dépôt GitHub contient l'ensemble des TD et TP de l'UV INF2 (Programmation et développements niveau 2) de l'UTC réalisée en A21. 
 
-__Notions abordées :__ 
+## 🎯 Objectifs de l'UV :
 
 * Révisions des notions d'algorithmie vues en INF1
 * Fonctions
@@ -15,9 +17,11 @@ __Notions abordées :__
 * Programmation WEB (Django)
 * Calcul et visualisation scientifique (NumPy)
 
-<br>
+## 🧑‍💻 Technologie utilisée :
 
-__Notes obtenues aux TP__ : 
+Le langage Python est utilisé dans l'UV.
+
+## ✏ Notes obtenues aux TP : 
 * TP 1 : 20 / 20
 * TP 2 : 20 / 20
 * TP 3 : 20 / 20
@@ -25,6 +29,9 @@ __Notes obtenues aux TP__ :
 * TP 5 : 19 / 20
 * TP 6 : 20 / 20
 
-<br>
-
 __UV validée avec A__
+
+
+## 💡Liens utiles :
+
+Lien vers la page Moodle de l'UV (nécessite d'être connecté pour y accéder): [UTC-INF2](https://moodle.utc.fr/course/view.php?id=2590)
